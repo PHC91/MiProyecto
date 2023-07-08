@@ -120,7 +120,7 @@
     font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    padding: 30px;
 }
 
 .box{
@@ -131,12 +131,6 @@ align-items: center;
 justify-content: center;
 padding-bottom: 30px;
 }
-
-.boxPadre{
-    position: relative;
-}
-
-
 
 .box ul li{
     display: flex;
