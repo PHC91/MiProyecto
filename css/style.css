@@ -87,14 +87,6 @@
     }
 }
 
-#fOrmulario {
-    display: inline-flex;
-    flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 50px;
-
-}
-
 .curso {
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
