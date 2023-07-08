@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Cursos</title>
+</head>
+<body>
+  <header>
+        <div id="container">
+            <img src="../img/Imagen1.jpg" alt="Amida">
+        </div>
+  </header>
+    
+        <nav class="navbar navbar-expand-lg p-3 fs-3 sticky-top"  style="background-color: #deb567;">
+          <div class="container-fluid flex-sm-column"  >
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav" >
+              <ul class="navbar-nav">
+                <li class="nav-item" >
+                  <a class="nav-link"  href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/servicios.html" target="_blank">Servicios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/cursos.html" target="_blank">Cursos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/publicaciones.html" target="_blank">Publicaciones</a>        
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/contacto.html" target="_blank">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+  
+      <main>
+    <h2 class="bloque">Cursos</h2>
+    <h2 class="comunicate">Inscribite a nuestras Formaciones y Cursos</h2>
+    
+    <div class="boxPadre">
+        <form action="">
+            <div class="box">
+              <div>
+                <h3>Seleccioná el curso o formación al que quieras inscribirte</h3>
+
+                 
+                
+                        <label for="si_no">¿Reside en territorio Argentino?</label>
+                            <select name="si_no" id="si_no">
+                                <option value="01">Si</option>
+                                <option value="02">No</option>
+                            </select></il>
+                            <br><br>
+                       <label for="cursos">¿En que curso quiere inscribirse?</label>
+                            <select name="cursos" id="cursos">
+                                <option value="01">Abordaje Integral a Familias</option>
+                                <option value="02">Especializacion neurolinguistica</option>
+                                <option value="03">Integracion Sensorial</option>
+                                <option value="04">Herramientas en DBT</option>
+                                <option value="05">Estimulacion para el desarrollo de HHSS</option>
+                                <option value="06">Elaboracion de Informes</option>
+                                <option value="07">Tratamiento en Trastornos Alimentarios</option>
+                            </select>
+                            <br><br>
+                        
+                            <label for="formacion">Indique su formacion</label>
+                            <select name="formacion" id="formacion">
+                                <option value="01">Lic. en Psicologia</option><option value="02">Lic. en Psicopedagogia</option>
+                                <option value="03">Lic. en Fonoaudiologia</option>
+                                <option value="04">Lic. en Musicoterapia</option>
+                                <option value="05">Lic. en Terapia Ocupacional</option>
+                                <option value="06">Lic. en Kinesiologia</option>
+                            </select>
+                            <br><br>
+                            
+                            <label for="pago">Metodo de Pago</label>
+                                <select name="pago" id="pago">
+                                    <option value="01">Tarjeta de Crebito</option>
+                                    <option value="02">Tarjeta de Debito</option>
+                                    <option value="03">Mercadopago</option>
+                                    <option value="04">Efectivo</option>
+                                </select>  
+                                <br><br>
+                                <input type="submit" value="Enviar ahora">
+                                <input type="reset" value="Borrar todo">
+                
+                
+                    </div>
+                <div class="datos">
+                    <label for="nombre">Nombre y Apellido</label>
+                    <input type="text" id="nombre" placeholder="Ingrese su Nombre y Apellido" required>
+                <br><br>
+
+                    
+                    <label for="mail" >Email</label>
+                    <input type="email" id="mail" placeholder="Ingrese su email" required>
+                <br><br>    
+                    
+                    
+                    <label for="teléfono">Telefono</label>
+                    <input type="number" id="telefono" placeholder="Telefono">
+                    <br><br> 
+                    <label for="consulta">Consulta</label>
+                    <textarea name="consulta" id="consulta" cols="30" rows="5" placeholder="Escriba aqui..."></textarea>
+                
+                </div>
+            </div>
+        </form>
+       
+    
+</div>       
+</main>
+      
+
+    <footer>
+        <p>© 2023 Equipo Amida. Todos los derechos reservados</p>
+        <p>Contactanos: equipoamida@gmail.com</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
