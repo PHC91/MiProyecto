@@ -1,0 +1,19 @@
+@media (max-width:990px){
+    #container img{
+        width:75%;
+        height: auto;
+    }
+}
+
+@media (max-width:990px){
+    .navbar-brand img{
+        display: none;
+    }
+}
+
+@media (max-width:990px){
+    .carousel-item{
+        max-width: 100%;
+        height: auto;
+    }
+}
