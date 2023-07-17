@@ -343,6 +343,12 @@ padding-bottom: 30px;
     align-items: center;
 }
 
+@media (max-width: 900px){
+    .achicarImg img{
+       width:50%;
+       height: auto;
+    }
+}
 
 
 .mEnupubli{ 

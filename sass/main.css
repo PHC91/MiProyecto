@@ -21,4 +21,46 @@
     max-width: 100%;
     height: auto;
   }
+}
+@media (max-width: 900px) {
+  .imgcarousel img {
+    max-height: 400px;
+    width: auto;
+  }
+}
+@media (max-width: 900px) {
+  .descripcion {
+    width: 50%;
+    font-size: 10px;
+  }
+}
+@media (max-width: 900px) {
+  #posicion {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 900px) {
+  .map {
+    width: 50%;
+  }
+}
+@media (max-width: 900px) {
+  .box-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin: 50px 0 50px 0px;
+  }
+}
+@media (max-width: 900px) {
+  .flexbox img {
+    width: 50%;
+  }
+}
+@media (max-width: 900px) {
+  .publicacioon {
+    width: 50px;
+  }
 }/*# sourceMappingURL=main.css.map */
