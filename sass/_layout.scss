@@ -3,7 +3,6 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: brown;
 }
-
 .descripcion {
     width: auto;
     height: auto;
@@ -12,7 +11,6 @@
     line-height: 2;
     font-family: 'Montserrat', sans-serif;
 }
-
 .info{
     padding-top: 50px;
     column-count: 1;
@@ -21,15 +19,12 @@
     margin-left: 10%;
     font-family: 'Montserrat', sans-serif
 }
-
 #posicion{
     display: inline-flex;
-   }
-
-   .map{
+}
+.map{
     padding-top: 50px;
 }
-
 .comunicate {
     color: rgb(158, 157, 157);
     font-family: 'Montserrat', sans-serif;
@@ -37,29 +32,25 @@
     justify-content: center;
     padding: 30px;
 }
-
 .box{
-    display: flex;
+display: flex;
 flex-direction: row;
 flex-wrap: nowrap;
 align-items: center;
 justify-content: center;
 padding-bottom: 30px;
 }
-
 .box ul li{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 }
-
 .box-container{
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows:  repeat(3,1fr); 
 }
-
 .box-container .flexbox{
     width: 400px;
     height: 500px;
@@ -68,21 +59,15 @@ padding-bottom: 30px;
     font-family: 'Montserrat', sans-serif;
     margin: 50px auto;
     align-content: center;
- 
-
 }
-
 .box-container .flexbox img{
     width: 100%;
-    object-fit: cover;
-    
+    object-fit: cover;   
 }
-
 .box-container .flexbox p{
     overflow:auto;
     font-size: 20px;
 }
-
 .publicacioon {
     display: flex;
     flex-direction:row;
@@ -91,18 +76,13 @@ padding-bottom: 30px;
     align-content: center;
     height: 100%;
     width: auto;
-    margin-left: 200px;
-   
+    margin-left: 200px;   
 }
-
 .publicacion img{
     width: 400px;
     height: 400px;
-    margin: 0;
-   
+    margin: 0;   
 }
-
-
 .publicacion p{
     background-color: rgb(193, 197, 193);
     width: 400px;
@@ -113,19 +93,15 @@ padding-bottom: 30px;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     padding-top: 5px;
-
 }
 .publicacion{
     padding-bottom: 60px;
     margin: 0;
     padding: 30px;
 }
-
-
 .bloqueFlex{
     padding: 30px;
 }
-
 #menup ul li{
     display: flex;
     text-decoration: none;
@@ -135,13 +111,11 @@ padding-bottom: 30px;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
 }
-
 #menup{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .mEnupubli{ 
     font-size: 30px;
     display: flex;

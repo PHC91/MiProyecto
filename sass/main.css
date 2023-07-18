@@ -194,6 +194,7 @@ footer {
   .descripcion {
     width: 50%;
     font-size: 10px;
+    margin: auto;
   }
 }
 @media (max-width: 900px) {
