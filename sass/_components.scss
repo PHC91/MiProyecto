@@ -1,0 +1,73 @@
+.inscripcioneS{
+    border: 1px white solid;
+    background-color: rgba(102, 229, 186, 0.977);
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+.inscripcioneS a{
+    background: transparent;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 20px 40px;
+}
+.inscripcioneS a:hover{
+    background-color: white;
+    color:rgb(102, 229, 186, 0.977) ;
+}
+.container-sub{
+    widows: 100%;
+    height: 400px;
+    background: url(https://thumbs.dreamstime.com/z/background-mail-envelopes-colored-34229314.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.conten-sub{
+    width: 100%;
+    height: 100%;
+    background: rgb(0,22,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.conten-sub h2{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.conten-sub p{
+    color: white;
+    font-size: 17px;
+    margin-bottom: 25px;
+    max-width: 500px;
+    text-align: center;
+}
+.conten-sub form .campo{
+    width: auto;
+    padding: 15px 15px;
+    font-size: 16px;
+    border:none;
+    border-radius: 3px 0px 0px 3px;
+    outline: 0px;
+}
+.container-sub form .btn-sub{
+    padding: 15px 15px;
+    border: none;
+    font-size: 16px;
+    border-radius: 0px 3px 3px 0px;
+    background: #68C3A3;
+    color: white;
+    cursor: pointer;
+    outline: 0px;
+}
+.conten-sub form .btn-sub:hover{
+    background: #3eba8f;
+}
