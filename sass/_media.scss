@@ -17,7 +17,7 @@
 }
 @media (max-width: 900px){
     .imgcarousel img{
-        max-height: 400px;
+        max-height: 300px;
         width: auto;
     }
 }
@@ -62,5 +62,12 @@
     .achicarImg img{
        width:50%;
        height: auto;
+    }
+}
+
+@media (max-width: 900px){
+    .footer{
+       display: flex;
+       justify-self: center;
     }
 }
