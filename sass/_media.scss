@@ -68,6 +68,20 @@
 @media (max-width: 900px){
     .footer{
        display: flex;
-       justify-self: center;
+       text-align: center
+       ;
     }
+}
+
+
+@media (max-width: 900px){
+    .publicacion {
+        
+        img{ max-width: 100%; height: auto; }
+        max-width: 100%; 
+        height: auto;
+        margin-bottom: 20px;
+        
+    
+  }
 }

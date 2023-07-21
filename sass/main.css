@@ -117,30 +117,6 @@ footer {
   margin-left: 200px;
 }
 
-.publicacion img {
-  width: 400px;
-  height: 400px;
-  margin: 0;
-}
-
-.publicacion p {
-  background-color: rgb(193, 197, 193);
-  width: 400px;
-  height: 50px;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  padding-top: 5px;
-}
-
-.publicacion {
-  padding-bottom: 60px;
-  margin: 0;
-  padding: 30px;
-}
-
 .bloqueFlex {
   padding: 30px;
 }
@@ -236,7 +212,18 @@ footer {
 @media (max-width: 900px) {
   .footer {
     display: flex;
-    justify-self: center;
+    text-align: center;
+  }
+}
+@media (max-width: 900px) {
+  .publicacion {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .publicacion img {
+    max-width: 100%;
+    height: auto;
   }
 }
 .inscripcioneS {
