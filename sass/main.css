@@ -223,7 +223,7 @@ footer {
   }
   .publicacion img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
   }
 }
 .inscripcioneS {
@@ -248,6 +248,12 @@ footer {
 .inscripcioneS a:hover {
   background-color: white;
   color: rgba(102, 229, 186, 0.977);
+}
+
+.ingresaR a:hover {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border-radius: 20%;
 }
 
 .container-sub {
