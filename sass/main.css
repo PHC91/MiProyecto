@@ -116,7 +116,6 @@ footer {
   color: white;
   text-align: center;
 }
-
 .flexbox figcaption h2 {
   height: 4rem;
   font-size: 25px;
@@ -150,28 +149,6 @@ footer {
   padding: 30px;
 }
 
-#menup ul li {
-  display: flex;
-  text-decoration: none;
-  border: black solid 2px;
-  background-color: #deb567;
-  padding: 0 0 10px 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
-}
-
-#menup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mEnupubli {
-  font-size: 30px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 @media (max-width: 990px) {
   #container img {
     width: 75%;
@@ -189,32 +166,32 @@ footer {
     height: auto;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 990px) {
   .imgcarousel img {
     max-height: 300px;
     width: auto;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 990px) {
   .descripcion {
-    width: 50%;
-    font-size: 10px;
+    width: 100%;
+    font-size: 16px;
     margin: 0 auto 40px auto;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 990px) {
   #posicion {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 990px) {
   .map {
     width: 50%;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 990px) {
   .box-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -222,29 +199,29 @@ footer {
     margin: 50px 0 50px 0px;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 990px) {
   .flexbox img {
     width: 50%;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 990px) {
   .publicacioon {
     width: 50px;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 990px) {
   .achicarImg img {
     width: 50%;
     height: auto;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 990px) {
   .footer {
     display: flex;
     text-align: center;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 990px) {
   .publicacion {
     max-width: 100%;
     height: auto;
@@ -303,14 +280,12 @@ footer {
   align-items: center;
   flex-direction: column;
 }
-
 .conten-sub h2 {
   color: white;
   font-size: 30px;
   margin-bottom: 10px;
   text-align: center;
 }
-
 .conten-sub p {
   color: white;
   font-size: 17px;
@@ -318,8 +293,7 @@ footer {
   max-width: 500px;
   text-align: center;
 }
-
-.conten-sub form .campo {
+.conten-sub .campo {
   width: auto;
   padding: 15px 15px;
   font-size: 16px;
@@ -327,8 +301,7 @@ footer {
   border-radius: 3px 0px 0px 3px;
   outline: 0px;
 }
-
-.container-sub form .btn-sub {
+.conten-sub form .btn-sub {
   padding: 15px 15px;
   border: none;
   font-size: 16px;
@@ -338,7 +311,6 @@ footer {
   cursor: pointer;
   outline: 0px;
 }
-
-.conten-sub form .btn-sub:hover {
+.conten-sub .btn-sub:hover {
   background: #3eba8f;
 }/*# sourceMappingURL=main.css.map */

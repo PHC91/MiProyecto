@@ -1,46 +1,48 @@
-@media (max-width:990px){
+$tamañoM: 990px;
+
+@media (max-width: $tamañoM){
     #container img{
         width:75%;
         height: auto;
     }
 }
-@media (max-width:990px){
+@media (max-width:$tamañoM){
     .navbar-brand img{
         display: none;
     }
 }
-@media (max-width:990px){
+@media (max-width:$tamañoM){
     .carousel-item{
         max-width: 100%;
         height: auto;
     }
 }
-@media (max-width: 900px){
+@media (max-width:$tamañoM){
     .imgcarousel img{
         max-height: 300px;
         width: auto;
     }
 }
-@media (max-width: 900px){ 
+@media (max-width:$tamañoM){ 
     .descripcion{
-       width:50%;
-       font-size: 10px;
+       width:100%;
+       font-size: 16px;
        margin: 0  auto 40px auto;   
     }
 }
-@media (max-width: 900px){
+@media (max-width:$tamañoM){
     #posicion{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
     }
 }
-@media (max-width: 900px){
+@media (max-width:$tamañoM){
     .map{
         width: 50%;
     }
 }
-@media (max-width: 900px){
+@media (max-width:$tamañoM){
     .box-container{
         display: grid;
         grid-template-columns: 1fr;
@@ -48,24 +50,24 @@
         margin: 50px 0 50px 0px;
     }
 }
-@media (max-width: 900px){
+@media (max-width:$tamañoM){
     .flexbox img{
        width:50%;
     }
 }
-@media (max-width: 900px){
+@media (max-width:$tamañoM){
     .publicacioon{
         width: 50px;
     }
 }
-@media (max-width: 900px){
+@media (max-width:$tamañoM){
     .achicarImg img{
        width:50%;
        height: auto;
     }
 }
 
-@media (max-width: 900px){
+@media (max-width: $tamañoM){
     .footer{
        display: flex;
        text-align: center
@@ -74,9 +76,8 @@
 }
 
 
-@media (max-width: 900px){
+@media (max-width:$tamañoM){
     .publicacion {
-        
         img{ max-width: 100%; height: 100%; }
         max-width: 100%; 
         height: auto;
