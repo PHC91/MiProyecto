@@ -239,7 +239,6 @@ footer {
   justify-content: center;
   padding: 40px;
 }
-
 .inscripcioneS a {
   background: transparent;
   display: inline-block;
@@ -250,16 +249,9 @@ footer {
   border: 1px solid white;
   padding: 20px 40px;
 }
-
 .inscripcioneS a:hover {
   background-color: white;
   color: rgba(102, 229, 186, 0.977);
-}
-
-.ingresaR a:hover {
-  background-color: white;
-  color: rgb(0, 0, 0);
-  border-radius: 20%;
 }
 
 .container-sub {

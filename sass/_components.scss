@@ -4,25 +4,19 @@
     display: flex;
     justify-content: center;
     padding: 40px;
-}
-.inscripcioneS a{
-    background: transparent;
-    display: inline-block;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-size: 30px;
-    text-decoration: none;
-    border: 1px solid white;
-    padding: 20px 40px;
-}
-.inscripcioneS a:hover{
-    background-color: white;
-    color:rgb(102, 229, 186, 0.977) ;}
-
-    .ingresaR a:hover{
+    a{
+        background: transparent;
+        display: inline-block;
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        font-size: 30px;
+        text-decoration: none;
+        border: 1px solid white;
+        padding: 20px 40px;
+    }
+    a:hover{
         background-color: white;
-        color:rgb(0, 0, 0) ;
-        border-radius: 20%;
+        color:rgb(102, 229, 186, 0.977) ;}
 }
 .container-sub{
     widows: 100%;
