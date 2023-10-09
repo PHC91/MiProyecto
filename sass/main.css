@@ -306,3 +306,8 @@ footer {
 .conten-sub .btn-sub:hover {
   background: #3eba8f;
 }/*# sourceMappingURL=main.css.map */
+
+.btn {
+  min-width: 40px;
+  min-height: 40px;
+}

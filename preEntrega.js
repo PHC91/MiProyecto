@@ -34,8 +34,8 @@ class Taller{
 localStorage.setItem("talleres", JSON.stringify(talleres))
 
 
- 
-function ReservarTaller(){
+ // COMENTADO
+/* function ReservarTaller(){
     let salirMenu = false
     do{
     let opcionIngresada = parseInt(prompt(`Ingrese la opción deseada
@@ -79,116 +79,13 @@ function ReservarTaller(){
        }
     }while(!salirMenu)
 
-}
+} */
 /* function elegirTaller(){
    let taller = prompt("Ingrese el ID del taller: ")
    seleccionTaller.push (talleres[taller-1])
    mostrarLista(seleccionTaller)
 } */
-   
-function borrarTaller(seleccionTaller){
-   mostrarLista(seleccionTaller)
-   let idElminar = parseInt(prompt("Ingrese el ID del taller que quiere eliminar"))
-   for(let elem of seleccionTaller){
-      if (elem.id == idElminar){
-         indice = seleccionTaller.indexOf(elem)
-      }
-   }
-   alert(indice)
-   seleccionTaller.splice(indice, 1)
-   mostrarLista(seleccionTaller)
-}
-
-
-function mostrarLista(array){
-   let mensaje = "Nuestros talleres son \n"
-   for(let taller of array){
-       mensaje = mensaje + "\n"+ taller.devolverTaller()
-
-   }
-   alert(mensaje)
-}
-
-function mostrarCarrito(seleccionTaller){
-   let mensaje = "Nuestros talleres son \n"
-   for(let taller of seleccionTaller){
-       mensaje = mensaje + "\n"+ taller.devolverTaller()
-
-   }
-   alert(mensaje)
-}
-let buscarTaller = document.getElementById("buscarTaller")
-
-function buscarNombre(buscado, array){
-   let busquedaT = array.filter(
-      (elem) =>{ return elem.nombre.toLocaleLowerCase().includes(buscado.toLocaleLowerCase())})
-      busquedaT.length >0 ?( mostrarCatalogoDOM(busquedaT)): mostrarCatalogoDOM(array)}
- 
- 
-      buscarTaller.addEventListener("input", () =>
-   {buscarNombre(buscarTaller.value, talleres)})
-
-   let precioBuscar = document.getElementById("precioBuscar")
-   function buscarPrecio(array, precioBusca){
-      let menor = array.filter(
-         (taller) => { return taller.precio <= precioBusca}
-      )
-      if(menor.length == 0){
-         alert(`No hay coincidencias de talleres que tengan un precio menor o igual a $${precioBusca}`)
-      } else {
-      mostrarCatalogoDOM(menor)
-      }
-      return menor
-   }
-
-precioBuscar.addEventListener("keydown",(event)=>
-{if(event.keyCode==13){
-   buscarPrecio(talleres, precioBuscar.value)
-}})
-
-
-
-
-   function ordenarMayorMenor(array){
-   let arrayMayorMenor = buscarPrecio(array, precioBuscar.value)
-   arrayMayorMenor.sort((a,b) => b.precio - a.precio)
-   console.log(arrayMayorMenor)
-   mostrarCatalogoDOM(arrayMayorMenor)
-   }
-
-   function ordenarMenorMayor(array){
-      let arrayMenorMayor = buscarPrecio(array, precioBuscar.value)
-      arrayMenorMayor.sort((a,b) => a.precio - b.precio)
-      console.log(arrayMenorMayor)
-      mostrarCatalogoDOM(arrayMenorMayor)
-      }
-
-   function ordenarABC(array){
-      let ordenadoAbc = buscarPrecio(array, precioBuscar.value)
-      ordenadoAbc.sort(
-         (a,b) =>{
-            if(a.nombre>b.nombre){
-               return 1
-            }
-            if(a.nombre<b.nombre){
-               return -1
-            }
-            return 0
-         }
-      )
-      mostrarCatalogoDOM(ordenadoAbc)
-   }
-
-   function totalCarrito (seleccionTaller){
-      mostrarLista(seleccionTaller)
-   const totalRe = seleccionTaller.reduce((producto, elem) =>{ return producto + elem.precio},0)
-      alert(`Su total a pagar es $${totalRe}`)
-      let horarioCompra = new Date ()
-      alert(`Su carrito ahora esta vacio, su compra fue realizada el ${horarioCompra}`)
-      seleccionTaller = []
-      alert(seleccionTaller)
-   }
-function reservarTurno (){
+ /* function reservarTurno (){
 let pacienTe = prompt("Ingrese el nombre y apellido del paciente")
 let terapia = 0
     let canTsesion1 = 0
@@ -226,8 +123,8 @@ let terapia = 0
         
         terapia = parseInt(prompt("Indique una nueva terapia que desea sumar"))
     }
-
-    let cantTotal = canTsesion1 + canTsesion2 + canTsesion3 + canTsesion4 + canTsesion5
+ */
+/*     let cantTotal = canTsesion1 + canTsesion2 + canTsesion3 + canTsesion4 + canTsesion5
     let subTotal= cantTotal * valorSesion
     let Total = (cantTotal * valorSesion) - (cantTotal * valorSesion) * 0.1 
 
@@ -235,8 +132,8 @@ let terapia = 0
 
     if (cantTotal >= 12) {alert(`El monto parcial para el/la paciente ${pacienTe.toUpperCase()} por ${cantTotal} sesiones a abonar es de $${subTotal}. \n\nDado que usted aplica al beneficio del descuento, su monto total a abonar es ${Total}`)
     }else{ alert(`El monto total para el/la paciente ${pacienTe.toLocaleUpperCase()} por ${cantTotal} sesiones a abonar es de $${subTotal}.`)}
-  }
-function menu(){
+  } */
+/* function menu(){
     let salirMenu = false
     do{
     let opcionIngresada = parseInt(prompt(`Ingrese la opción deseada
@@ -259,12 +156,21 @@ function menu(){
           break
        }
     }while(!salirMenu)
-}
+} */  
+/* function mostrarCarrito(seleccionTaller){
+   let mensaje = "Nuestros talleres son \n"
+   for(let taller of seleccionTaller){
+       mensaje = mensaje + "\n"+ taller.devolverTaller()
+
+   }
+   alert(mensaje)
+} */
 
 
-let containerTaller = document.getElementById("taller")
+//FUNCIONES
 
 function mostrarCatalogoDOM(array){
+   let containerTaller = document.getElementById("taller")
    containerTaller.innerHTML="" 
    for(let taller of array){
       let tallerNEWDiv = document.createElement("div")
@@ -290,7 +196,90 @@ function mostrarCatalogoDOM(array){
       })
    }
    }
+function cargarCarrito(array){
+      modalBody.innerHTML=""
+    array.forEach( (productoCarrito) => {
+      modalBody.innerHTML += `<div class="card border-primary mb-3" id ="productoCarrito${productoCarrito.id}" style="max-width: 540px;">
+      <img class="card-img-top" height="300px" src="../img/${productoCarrito.imagen}" alt="">
+      <div class="card-body">
+             <h4 class="card-title">${productoCarrito.nombre}</h4>
+             <p class="card-text">${productoCarrito.duracion}</p>
+              <p class="card-text">$${productoCarrito.precio}</p> 
+              <button class= "btn btn-danger btn-sm" id="botonEliminar${productoCarrito.id}"><i class="fas fa-trash-alt">Eliminar</i></button>
+      </div>    
+   </div>`
+   let botonEliminar= document.getElementById(`botonEliminar${productoCarrito.id}`)
+   botonEliminar.addEventListener("click", () => {
+      borrarTaller(productoCarrito)})
+    })
+   deshabilitarBoton()
+    totalCarrito(array)
+   }
+   mostrarCatalogoDOM(talleres)   
+function borrarTaller(elem){
+      let tallerEliminar = seleccionTaller.findIndex((taller) => taller.id == elem.id)
+      tallerEliminar != undefined ?
+          (seleccionTaller.splice(tallerEliminar,1),
+          localStorage.setItem("carrito", JSON.stringify(seleccionTaller))):
+          cargarCarrito(seleccionTaller)
+   
+    }
+function mostrarLista(array){
+   let mensaje = "Nuestros talleres son \n"
+   for(let taller of array){
+       mensaje = mensaje + "\n"+ taller.devolverTaller()
 
+   }
+   alert(mensaje)
+}
+function buscarNombre(buscado, array){
+   let busquedaT = array.filter(
+      (elem) =>{ return elem.nombre.toLocaleLowerCase().includes(buscado.toLocaleLowerCase())})
+      busquedaT.length >0 ?( mostrarCatalogoDOM(busquedaT)): mostrarCatalogoDOM(array)
+   
+   busquedaT.length > 0 ? (mostrarCatalogoDOM(busquedaT), busquedaTDiv.innerHTML=""):(mostrarCatalogoDOM(array), busquedaTDiv.innerHTML = `<h3>No hay coincidencias con su busqueda, estos son los talleres disponibles<h3>`)
+   }
+   function buscarPrecio(array, precioBusca){
+      let menor = array.filter(
+         (taller) => { return taller.precio <= precioBusca}
+      )
+      if(menor.length == 0){
+         alert(`No hay coincidencias de talleres que tengan un precio menor o igual a $${precioBusca}`)
+      } else {
+      mostrarCatalogoDOM(menor)
+      }
+      return menor
+   }
+   function ordenarMayorMenor(array){
+   let arrayMayorMenor = array
+   arrayMayorMenor.sort((a,b) => b.precio - a.precio)
+   mostrarCatalogoDOM(arrayMayorMenor)
+   }
+   function ordenarMenorMayor(array){
+      let arrayMenorMayor = array
+      arrayMenorMayor.sort((a,b) => a.precio - b.precio)
+      mostrarCatalogoDOM(arrayMenorMayor)
+      }
+   function ordenarABC(array){
+      let ordenadoAbc = array
+      ordenadoAbc.sort(
+         (a,b) =>{
+            if(a.nombre>b.nombre){
+               return 1
+            }
+            if(a.nombre<b.nombre){
+               return -1
+            }
+            return 0
+         }
+      )
+      mostrarCatalogoDOM(ordenadoAbc)
+   }
+   function totalCarrito (array){
+   const totalRe = array.reduce((producto, elem) =>{ return producto + elem.precio},0)
+      totalRe >0 ? precioTotal.innerHTML=  `<strong>El presupuesto total es $${totalRe}</strong>`:
+      precioTotal.innerHTML=  `<strong>No posee talleres en su carrito</strong>`
+   }
 function agregarTaller(elem){
   let tallerAgregado = seleccionTaller.find((taller) => taller.id == elem.id)
   tallerAgregado == undefined ?
@@ -299,29 +288,41 @@ function agregarTaller(elem){
       console.log(seleccionTaller)):
       alert(`El taller ${elem.nombre} ya existe en el carrito`)
 }
+function deshabilitarBoton () {
+   seleccionTaller.length == 0 ? botonFinalizarCompra.className='btn btn-success disabled' : botonFinalizarCompra.className='btn btn-success'}
+
+
+//DOM
+let botonFinalizarCompra = document.getElementById("botonFinalizarCompra")
+let buscarTaller = document.getElementById("buscarTaller")
+let precioBuscar = document.getElementById("precioBuscar")
 let botonModal = document.getElementById("botonModal")
 let modalBody = document.getElementById("modalBody")
-
-function cargarCarrito(array){
-   modalBody.innerHTML=""
- array.forEach( (productoCarrito) => {
-   modalBody.innerHTML += `<div class="card border-primary mb-3" id ="productoCarrito${productoCarrito.id}" style="max-width: 540px;">
-   <img class="card-img-top" height="300px" src="../img/${productoCarrito.imagen}" alt="">
-   <div class="card-body">
-          <h4 class="card-title">${productoCarrito.nombre}</h4>
-          <p class="card-text">${productoCarrito.duracion}</p>
-           <p class="card-text">$${productoCarrito.precio}</p> 
-           <button class= "btn btn-danger btn-sm" id="botonEliminar${productoCarrito.id}"><i class="fas fa-trash-alt"></i></button>
-   </div>    
-</div>`
- })
-}
-botonModal.addEventListener("click", () =>{
-   cargarCarrito(seleccionTaller)})
-
-mostrarCatalogoDOM(talleres)
-
 let selectOrden = document.getElementById("selectOrden")
+let talleresStorage = JSON.parse(localStorage.getItem("talleres"))
+let precioTotal = document.getElementById("precioTotal")
+let confirmarCompra = document.getElementById("confirmarCompra")
+
+
+//EVENTOS
+buscarTaller.addEventListener("input", () =>
+{buscarNombre(buscarTaller.value, talleres)})
+precioBuscar.addEventListener("keydown",(event)=>
+{if(event.keyCode==13){
+   buscarPrecio(talleres, precioBuscar.value)
+}})
+confirmarCompra.addEventListener("click", () => {
+   seleccionTaller=[]
+   localStorage.setItem("carrito", JSON.stringify(seleccionTaller))
+   Swal.fire({
+      icon: 'success',
+      title: '¡Gracias por tu compra!',
+      text: 'Te esperamos con muchas ganas para los encuentros de formacion ',
+      showConfirmButton: false,
+      timer: 4000
+    })
+  
+})
 selectOrden.addEventListener("change", () => { 
    switch(selectOrden.value){
       case "1":
@@ -339,5 +340,5 @@ selectOrden.addEventListener("change", () => {
       break;
    }
 })
-
-let talleresStorage = JSON.parse(localStorage.getItem("talleres"))
+botonModal.addEventListener("click", () =>{
+   cargarCarrito(seleccionTaller)})
