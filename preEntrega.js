@@ -199,17 +199,22 @@ function mostrarCatalogoDOM(array){
 function cargarCarrito(array){
       modalBody.innerHTML=""
     array.forEach( (productoCarrito) => {
-      modalBody.innerHTML += `<div class="card border-primary mb-3" id ="productoCarrito${productoCarrito.id}" style="max-width: 540px;">
+      let item =document.createElement("div")
+      
+      item.innerHTML = `<div class="card border-primary mb-3" id ="productoCarrito${productoCarrito.id}" style="max-width: 540px;">
       <img class="card-img-top" height="300px" src="../img/${productoCarrito.imagen}" alt="">
       <div class="card-body">
              <h4 class="card-title">${productoCarrito.nombre}</h4>
              <p class="card-text">${productoCarrito.duracion}</p>
               <p class="card-text">$${productoCarrito.precio}</p> 
-              <button class= "btn btn-danger btn-sm" id="botonEliminar${productoCarrito.id}"><i class="fas fa-trash-alt">Eliminar</i></button>
+              <button type="button" class= "btn btn-danger btn-sm" id="botonEliminar${productoCarrito.id}"><i class="fas fa-trash-alt">Eliminar</i></button>
       </div>    
    </div>`
-   let botonEliminar= document.getElementById(`botonEliminar${productoCarrito.id}`)
+   modalBody.append(item)
+   let botonEliminar=null
+   botonEliminar= document.getElementById(`botonEliminar${productoCarrito.id}`)
    botonEliminar.addEventListener("click", () => {
+      console.log("eventClick---BtnEliminar")
       borrarTaller(productoCarrito)})
     })
    deshabilitarBoton()
@@ -217,10 +222,12 @@ function cargarCarrito(array){
    }
    mostrarCatalogoDOM(talleres)   
 function borrarTaller(elem){
+   console.log("fnBorrarTaller: "+elem)
       let tallerEliminar = seleccionTaller.findIndex((taller) => taller.id == elem.id)
       tallerEliminar != undefined ?
           (seleccionTaller.splice(tallerEliminar,1),
           localStorage.setItem("carrito", JSON.stringify(seleccionTaller))):
+          alert(`El taller ${elem.nombre} ya fue eliminado  `)
           cargarCarrito(seleccionTaller)
    
     }
@@ -251,17 +258,19 @@ function buscarNombre(buscado, array){
       return menor
    }
    function ordenarMayorMenor(array){
-   let arrayMayorMenor = array
+   let arrayMayorMenor = buscarPrecio(array, precioBuscar.value)
    arrayMayorMenor.sort((a,b) => b.precio - a.precio)
+   console.log(arrayMayorMenor)
    mostrarCatalogoDOM(arrayMayorMenor)
    }
    function ordenarMenorMayor(array){
-      let arrayMenorMayor = array
+      let arrayMenorMayor = buscarPrecio(array, precioBuscar.value)
       arrayMenorMayor.sort((a,b) => a.precio - b.precio)
+      console.log(arrayMenorMayor)
       mostrarCatalogoDOM(arrayMenorMayor)
       }
    function ordenarABC(array){
-      let ordenadoAbc = array
+      let ordenadoAbc = buscarPrecio(array, precioBuscar.value)
       ordenadoAbc.sort(
          (a,b) =>{
             if(a.nombre>b.nombre){
