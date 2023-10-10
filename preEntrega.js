@@ -294,8 +294,31 @@ function agregarTaller(elem){
   tallerAgregado == undefined ?
       (seleccionTaller.push(elem),
       localStorage.setItem("carrito", JSON.stringify(seleccionTaller)),
-      console.log(seleccionTaller)):
-      alert(`El taller ${elem.nombre} ya existe en el carrito`)
+      Toastify({
+         text: "El taller fue agregado",
+         duration: 3000,
+         destination: "https://github.com/apvarun/toastify-js",
+         gravity: "bottom", // `top` or `bottom`
+         position: "right", // `left`, `center` or `right`
+         stopOnFocus: true, // Prevents dismissing of toast on hover
+         style: {
+           background: "linear-gradient(to right, #00b09b, #96c93d)",
+         },
+         onClick: function(){} // Callback after click
+       }).showToast()): Toastify({
+         text: `El taller ${elem.nombre} ya existe en el carrito`,
+         duration: 3000,
+         destination: "https://github.com/apvarun/toastify-js",
+         newWindow: true,
+         close: true,
+         gravity: "bottom", // `top` or `bottom`
+         position: "right", // `left`, `center` or `right`
+         stopOnFocus: true, // Prevents dismissing of toast on hover
+         style: {
+           background: "linear-gradient(to right, #00b09b, #96c93d)",
+         },
+         onClick: function(){} // Callback after click
+       }).showToast();
 }
 function deshabilitarBoton () {
    seleccionTaller.length == 0 ? botonFinalizarCompra.className='btn btn-success disabled' : botonFinalizarCompra.className='btn btn-success'}
