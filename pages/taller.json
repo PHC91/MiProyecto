@@ -1,0 +1,52 @@
+[
+        {
+            "id": 1,
+            "nombre": "Habilidades Sociales",
+            "duracion": "12 semanas",
+            "precio": 120000,
+            "imagen": "Hhss.jpg",
+            "descripcion": "Desarrollo de conductas socio-emocionales adaptativas para la vida diaria"
+        },
+        {
+            "id": 2,
+            "nombre":"Estimulacion Cognitiva",
+            "duracion":80000,
+            "precio":"6 semanas",
+            "imagen":"EstCog.jpg",
+            "descripcion":"Refuerzo y desarrollo de las funciones ejecutivas, las cuales comprenden: planificacion, atencion, organizacion, procesamiento de informacion."
+        },
+        {
+            "id": 3,
+            "nombre":"Habilidades Escolares",
+            "duracion":"4 semanas",
+            "precio": 50000,
+            "imagen":"Hhee.jpg",
+            "descripcion":"Estas habilidades involucran la capacidad de lectura, escritura, análisis, síntesis, organización."
+        },
+        {
+            "id": 4,
+            "nombre":"Taller a Padres",
+            "duracion":"24 semanas",
+            "precio":160000,
+            "imagen":"Tallerpadres.jpg",
+            "descripcion":"Ofrecer elementos para que los padres descubran la importancia de conocer todos los aspectos de la vida de sus hijos como asi tambien ampliar sus recursos parentales."
+        },
+        {
+            "id": 5,
+            "nombre":"Estimulacion Temprana",
+            "duracion":"3 semanas",
+            "precio":40000,
+            "imagen":"Eett.jpg",
+            "descripcion":"Conjunto de técnicas de intervención educativas que pretende impulsar el desarrollo cognitivo, social y emocional del niño durante la etapa infantil"
+        },
+        {
+            "id": 2,
+            "nombre":"Primeros Cuidados (Infancia Temprana)",
+            "duracion":"2 semanas",
+            "precio":20000,
+            "imagen":"1Cuidados.jpg",
+            "descripcion":"Una revisión general de los primeros cuidados que va a recibir tu bebé en casa después del nacimiento, pasando desde crecimiento y desarrollo."
+        }
+    ] 
+    
+  

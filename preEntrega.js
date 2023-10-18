@@ -15,7 +15,7 @@ class Taller{
    }
  }
 
- const HHSS = new Taller(1,"Habilidades Sociales", "12 semanas", 120000, "Hhss.jpg", "Desarrollo de conductas socio-emocionales adaptativas para la vida diaria")
+/*  const HHSS = new Taller(1,"Habilidades Sociales", "12 semanas", 120000, "Hhss.jpg", "Desarrollo de conductas socio-emocionales adaptativas para la vida diaria")
  
  const EstCognitiva = new Taller(2,"Estimulacion Cognitiva", "6 semanas", 80000, "EstCog.jpg", "Refuerzo y desarrollo de las funciones ejecutivas, las cuales comprenden: planificacion, atencion, organizacion, procesamiento de informacion.")
  
@@ -26,12 +26,45 @@ class Taller{
  const EstTemprana = new Taller(5,"Estimulacion Temprana", "3 semanas", 40000, "Eett.jpg", "onjunto de técnicas de intervención educativas que pretende impulsar el desarrollo cognitivo, social y emocional del niño durante la etapa infantil")
  
  const PrimerosCuidados = new Taller(6,"Primeros Cuidados (Infancia Temprana)", "2 semanas", 20000, "1Cuidados.jpg", "Una revisión general de los primeros cuidados que va a recibir tu bebé en casa después del nacimiento, pasando desde crecimiento y desarrollo.")
+ */
+ const talleres = []
 
- const talleres = [HHSS, EstCognitiva, HHEE,TallerPadres, EstTemprana, PrimerosCuidados]
+  cargarTalleres(talleres)
 
- let seleccionTaller = JSON.parse(localStorage.getItem("carrito")) ?? []
+ function cargarTalleres(talleres){
+      fetch("../taller.json")
+      .then( (res)=>{
+         console.log(JSON.stringify(res))
+         return res.json()
+      })
+      .then( (dataTaller)=>{
+         dataTaller.forEach((taller)=>{
+            let tallernuevo = new Taller (taller.id, taller.nombre, taller.duracion, taller.precio, taller.imagen, taller.descripcion)
+            talleres.push(tallernuevo)
+         })
+   localStorage.setItem("talleres", JSON.stringify(talleres))
+   let seleccionCarrito2 =[]
+   localStorage.setItem("carrito", JSON.stringify(seleccionCarrito2))
 
-localStorage.setItem("talleres", JSON.stringify(talleres))
+   mostrarCatalogoDOM(talleres) 
+   })
+   .catch((error)=>{
+      console.log("catch error")
+      console.log(error)
+   })
+ }
+ async function cargarTalleres2(talleres){
+   try {
+      let res = await fetch("./taller.json",{
+         method: 'GET', // here
+      })
+      console.log(JSON.stringify(res))
+   } catch (error) {
+      console.log(error)
+   }
+ }
+
+
 
 
  // COMENTADO
@@ -220,7 +253,7 @@ function cargarCarrito(array){
    deshabilitarBoton()
     totalCarrito(array)
    }
-   mostrarCatalogoDOM(talleres)   
+     
 function borrarTaller(elem){
    console.log("fnBorrarTaller: "+elem)
       let tallerEliminar = seleccionTaller.findIndex((taller) => taller.id == elem.id)
@@ -322,7 +355,7 @@ function agregarTaller(elem){
 }
 function deshabilitarBoton () {
    seleccionTaller.length == 0 ? botonFinalizarCompra.className='btn btn-success disabled' : botonFinalizarCompra.className='btn btn-success'}
-
+   localStorage.setItem("talleres", JSON.stringify(talleres))
 
 //DOM
 let botonFinalizarCompra = document.getElementById("botonFinalizarCompra")
@@ -334,7 +367,7 @@ let selectOrden = document.getElementById("selectOrden")
 let talleresStorage = JSON.parse(localStorage.getItem("talleres"))
 let precioTotal = document.getElementById("precioTotal")
 let confirmarCompra = document.getElementById("confirmarCompra")
-
+let seleccionTaller = JSON.parse(localStorage.getItem("carrito"))
 
 //EVENTOS
 buscarTaller.addEventListener("input", () =>
